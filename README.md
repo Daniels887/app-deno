@@ -9,7 +9,7 @@
 - `cd app-deno`
 - `deno run --allow-net src/app.ts`
 
-## Rotas
+## :clipboard: Rotas
 
 | Rota                 | Descrição                |
 | -------------------- | ------------------------ |
