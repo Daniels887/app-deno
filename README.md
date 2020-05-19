@@ -15,5 +15,6 @@
 | -------------------- | ------------------------ |
 | GET /users           | retorna todos os usuários|
 | POST /new            | adiciona um novo usuário |
+| DELETE /users/:id    | remove um usuário da lista |
 
 > Que a força esteja com você :muscle:
