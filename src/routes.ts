@@ -5,5 +5,6 @@ const router = new Router()
 
 router.get('/users', UsersController.show)
 .post('/new', UsersController.store)
+.delete('/user/:id', UsersController.delete)
 
 export default router
