@@ -27,13 +27,27 @@ class Users {
     context.response.status = 200
   }
 
-  async delete(context: any) {
+  async delete(context: any): Promise<void> {
     const id = await context.params.id
     const i = users.findIndex(u => u.id == id)
-    if(i < 0) return null
 
-    const deleteUser = users.slice(i, 1)
-    context.response.body = deleteUser ? deleteUser[0] : null
+    users.splice(i, 1)
+    context.response.body = users
+    context.response.status = 200
+  }
+
+  async update(context: any): Promise<void>  {
+    const id = await context.params.id
+    const i = users.findIndex(u => u.id == id)
+
+    const body = await context.request.body()
+    const updateUser = {
+      ...users[i],
+      ...body.value
+    }
+
+    users.splice(i, 1, updateUser)
+    context.response.body = users
     context.response.status = 200
   }
 }
