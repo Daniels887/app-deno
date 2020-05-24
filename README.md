@@ -9,6 +9,11 @@
 - `cd app-deno`
 - `deno run --allow-net src/app.ts`
 
+## :hammer: Tecnologias
+- Deno
+- Oak
+- Typescript
+
 ## :clipboard: Rotas
 
 | Rota                 | Descrição                |
